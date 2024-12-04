@@ -1,0 +1,2 @@
+class ToModelUserType {}
+export { ToModelUserType };

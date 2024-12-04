@@ -1,0 +1,21 @@
+openapi: 3.0.0
+info:
+  title: School Erp API
+  version: 1.0.0
+  description: |
+servers:
+  - url: /api/v1s
+  - url: http://localhost:9000/api/v1
+
+paths:
+
+security:
+  - ClientApiKeyAuth: []
+
+components:
+  securitySchemes:
+    ClientApiKeyAuth:
+      type: apiKey
+      in: header
+      name: access-token
+  schemas:

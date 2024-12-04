@@ -1,0 +1,42 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es2017", // Compatible with modern JS features
+    "lib": ["es2017", "esnext.asynciterable"],
+    "typeRoots": ["node_modules/@types"],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true, // Allows default imports for CommonJS modules
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node16", // Use modern Node.js resolution
+    "module": "Node16", // Align with `node16` resolution
+    "pretty": true,
+    "sourceMap": true,
+    "declaration": true,
+    "outDir": "dist",
+    "allowJs": true,
+    "noEmit": false,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "baseUrl": "src",
+    "paths": {
+      "../*": ["*"],
+      "@config/*": ["config/*"],
+      "@contracts/*": ["contracts/*"],
+      "@controllers/*": ["controllers/*"],
+      "@converters/*": ["converters/*"],
+      "@database/*": ["database/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@models/*": ["models/*"],
+      "@repositories/*": ["repositories/*"],
+      "@routes/*": ["routes/*"],
+      "@services/*": ["services/*"],
+      "@types/*": ["types/*"],
+      "@utils/*": ["utils/*"],
+      "@validations/*": ["validations/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.json", ".env", "src/types/users/.type.ts"],
+  "exclude": ["node_modules", "src/http", "src/logs", "src/tests"]
+}
