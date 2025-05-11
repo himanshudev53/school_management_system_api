@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "ES2020", // Modern JS target
+    "module": "CommonJS", // Required for Node.js
+    "outDir": "./dist", // Output directory for compiled code
+    "rootDir": "./src", // Root directory of your TS source files
+    "moduleResolution": "node", // Resolve like Node.js
+    "esModuleInterop": true, // Allow `import fs from 'fs'`
+    "forceConsistentCasingInFileNames": true, // Avoid case mismatch issues
+    "strict": true, // Enables all strict type-checking
+    "skipLibCheck": true, // Skip type checking for node_modules
+    "sourceMap": true, // Generate source maps for debugging
+    "resolveJsonModule": true, // Allow importing .json files
+    "allowSyntheticDefaultImports": true, // Compatibility with Babel/Webpack-style imports
+    "noImplicitAny": true, // Prevent implicit `any` types
+    "baseUrl": ".", // Needed for paths aliasing
+    "paths": {
+      "../*": ["src/*"],
+      "@utils/*": ["/utils/*"],
+      "@config/*": ["/config/*"],
+      "@contracts/*": ["/contracts/*"],
+      "@controllers/*": ["/controllers/*"]
+    },
+    "types": ["node"] // Type definitions for Node.js
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
