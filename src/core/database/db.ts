@@ -6,6 +6,8 @@ import ProjectsModel from '../../models/projects.model';
 import SurveysModel from '../../models/surveys.model';
 import SurveyQualificationModel from '../../models/survey-qualification.model';
 import SurveyQualificationConditionModel from '../../models/survey-qualification-condition.model';
+import ClassModel from '../../models/classes.model';
+import SectionModel from '../../models/sections.model';
 export const sequelize = new Sequelize.Sequelize(String(DB_NAME), String(DB_USERNAME), String(DB_PASSWORD), {
   dialect: 'postgres',
   host: String(DB_HOST),
@@ -38,6 +40,8 @@ export const sequelize = new Sequelize.Sequelize(String(DB_NAME), String(DB_USER
 sequelize.authenticate();
 
 const DB = {
+  Section: SectionModel(sequelize),
+  Class: ClassModel(sequelize),
   Clients: ClientsModel(sequelize),
   Projects: ProjectsModel(sequelize),
   Surveys: SurveysModel(sequelize),
